@@ -1,3 +1,7 @@
+.vscode/*
+
+### TEX .gitignore auto-generated
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
