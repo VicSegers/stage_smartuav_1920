@@ -1,52 +1,21 @@
 \def\student{Vic Segers}
 \def\bedrijfspromotor{Tim Dupont}
-\def\pxlpromotor{Tim Dupont}
+\def\hogeschoolpromotor{Tim Dupont}
 \def\stagebedrijf{PXL Expertisecentrum Smart ICT}
 
 \documentclass[a4paper]{article}
 \usepackage{./PXLStageportfolio}
 
 \begin{document}
-  \pagenumbering{gobble}
-
-  \begin{titlepage}
-    \begin{figure}
-      \includegraphics[width=0.5\linewidth]{images/logo_PXL_University_of_applied_sciences_and_arts.png}
-    \end{figure}
-    \begin{center}
-      \vspace*{0.5cm}
-      \Huge\textbf{\textcolor{pxlgreen}{Stageportfolio}}
-      \par
-      \vspace{0.5cm}
-      \Large\textbf{\textcolor{pxlgreen}{PXL-IT}}
-      \par
-      \vspace{2.5cm}
-      \normalsize\textbf{\stagebedrijf}
-      \par
-    \end{center}
-    \vspace{2.5cm}
-    \begin{tabbing}
-      Student: ~~~~~~~~~~~~~~~ \= \textbf{\student}\\
-      Bedrijfspromotor: \> \textbf{\bedrijfspromotor}\\
-      Hogeschoolpromotor: \> \textbf{\pxlpromotor}
-    \end{tabbing}
-    \vfill
-    \framebox{%
-    \begin{minipage}{0.5\linewidth}
-      Hogeschool PXL\\
-      Elfde Liniestraat 24\\
-      B-3500 Hasselt
-      \bigbreak
-      \hypersetup{linkcolor=blue}\href{https://www.pxl.be/}{www.pxl.be}
-    \end{minipage}}
-  \end{titlepage}
+  \pagenumbering{gobble}  % No page numbering
+  \titlepage{\stagebedrijf}{\student}{\bedrijfspromotor}{\hogeschoolpromotor}
 
   \begingroup
-  \hypersetup{linkcolor=black}
-  \tableofcontents
+    \hypersetup{linkcolor=black}  % Black links in table of contents
+    \tableofcontents
   \endgroup
 
-  \pagenumbering{arabic}
+  \pagenumbering{arabic}  % Start page numbering
 
   \section{Informatiefiche}
     \begin{tabbing}
@@ -69,12 +38,13 @@
       \> tim.dupont@pxl.be
     \end{tabbing}
     \begin{tabbing}
-      Hogeschoolpromotor: \textbf{Dhr. \pxlpromotor}
+      Hogeschoolpromotor: \textbf{Dhr. \hogeschoolpromotor}
     \end{tabbing}
     Stageproject: \textbf{Navigating Smart UAV systems in dynamic environments}
     \begin{addmargin}[5ex]{0pt}
       Het doel van de stage is om een flexibele multi-agentsysteem te ontwikkelen voor robots. Er zullen ook enkele demonstraties uitgewerkt moeten worden om dit systeem werkend te zien.
     \end{addmargin}
+
   \section{Plan van aanpak}
     \subsection{Situatieschets stagebedrijf + motivatie}
       % In de situatieschets geef je aan in welke omgeving het project zich afspeelt.
@@ -84,19 +54,20 @@
       % (in welk IT domein zijn ze gespecialiseerd, op welk vlak van de IT business
       % willen ze zich profileren, ...)? Wat is jouw motivering van het gekozen domein,
       % het gekozen project en het gekozen stagebedrijf?
-      Het project zal door 3 stagestudenten ontwikkeld worden. Iedere student krijgt
-      een specifieke taak en deze worden samen gebracht tot een geheel. De stage
-      gaat door in het AI Lab op de Corda Campus.\par
-      \stagebedrijf ontwikkelt en onderzoekt allerlei slimme toepassingen van de
+      Het project zal door 2 stagestudenten ontwikkeld worden. Iedere student krijgt
+      een specifieke taak, maar er gaat veel worden samen gewerkt. De stage
+      gaat door in de AI Hub op de Corda Campus.\par
+      \stagebedrijf{} ontwikkelt en onderzoekt allerlei slimme toepassingen van de
       emerging techonologies en bundelt praktijkgericht onderzoek en dienstverlening
       op het snijvlak van IT en elektronica. Het spitst zich toe op mobiele technologie
       in de breedste zin van het woord en zoekt naar slimme oplossingen voor
       objecten en gemeenschappen: van slimme sensoren, uurwerken, telefoons en tablets,
       tot slimme gebouwen en smart cities. Daarbij staat de toepasbaarheid en
       inzetbaarheid van ontwikkelende toepassingen in de praktijk steeds voorop.\par
-      Ik heb voor \stagebedrijf gekozen omdat ik er de kans kreeg om mijn IT-
-      project verder uit te werken. Ook het kiezen van een meer onderzoekende stage
-      leek mij niet slecht om na mijn bachelor door te schakelen naar een master.
+      Ik heb voor \stagebedrijf{} gekozen omdat ik er de kans kreeg om verder onderzoek
+      te doen waaraan ik tijdens mijn IT-Project ook al aan heb gewerkt. Ook het kiezen
+      van een meer onderzoekende stage leek mij niet slecht om na mijn bachelor door te
+      schakelen naar een master.
 
       \newpage
 
@@ -105,10 +76,11 @@
       % is het probleem dat je moet gaan oplossen? Waarom werd het project opgestart,
       % in welke fase bevindt het project zich op het moment van de stage,...? Wat er
       % geproduceerd gaat worden, wordt in de doelstelling uiteengezet.
+      Het project is opgestart om een basis architectuur te hebben zodat er makkelijk en
+      snel een ontwikkelingsomgeving ter beschikking is. Verder wordt er ook onderzoek gedaan
+      naar verschillende SLAM algoritmes
       Het project heeft al meerdere voorafgaande fasen gehad. Zo heeft een IT-project
-      zich al bezig gehouden met een deel van dit onderwerp. En dit IT-project ging
-      verder op reeds onderzochte informatie van een stage ook op \stagebedrijf.
-      Hierdoor heeft het stageproject een basis verder op te bouwen.
+      en een stage al onderzoek en implementaties gedaan over dit onderwerp.
 
     \newpage
 
@@ -146,7 +118,7 @@
           \2[] Het bereiken van de doelstellingen kan voor sommige projecten, afhankelijk van de beperkingen
           en de kritische succesfactoren, nog een vraagteken zijn. Vermeld hier deze onzekerheden.
         \1 \textbf{Afspraken:}
-          \2 Studenten houden zich aan de glijdende werkuren van \stagebedrijf (I.e. 38u per week, starten $\leq$
+          \2 Studenten houden zich aan de glijdende werkuren van \stagebedrijf{} (I.e. 38u per week, starten $\leq$
           9 am, minimaal 30 min middagpauze)
           \2 Alles wordt ontwikkeld op eigen laptop of op de voorziene workstations, tijdens de werkuren pushen
           naar een met de begeleider afgesproken repository
@@ -197,9 +169,65 @@
     om schriftelijke, mondelinge een elektronische bronnen gaan.\par
     Voor de omschrijving gelden enkele vaste regels die vermeld staan in de
     cursus op BlackBoard.
+
   \section{Rapportage}
-  \subsection{Wekelijkse rapportage}
-  \subsection{Eindrapportage}
+    \subsection{Wekelijkse rapportage}
+      Deze tabel wordt tijdens de stageperiode voor iedere week ingevuld.\par
+      \underline{Met persoonlijke reflectie bedoelen we:}\par
+      Wat ging goed, wat ging minder goed, wat heb je geleerd, in welke mate heeft de
+      opleiding je kunnen helpen bij het uitvoeren van de opdracht. Welke waren je
+      valkuilen? Wat is de meerwaarde voor het bedrijf? Wat is de meerwaarde voor het
+      team (stageteam en bedrijfsteam)? Welke softskills heb je bijgeleerd? Wat zou je
+      anders doen als je de stage(week) opnieuw zou beginnen? Wat zou beter gekund hebben?
+      Welke lessen heb je geleerd ? Op welke punten ga je je de volgende keer focussen
+      en hoe ga je dit aanpakken?
+
+      \begin{tabularx}{\textwidth}{| l | X |}
+        \hline
+        Datum: & item 12 \\
+        \hline
+        Geplande taken: & item 22 \\
+        \hline 
+        Stand van zaken: & item 32 \\
+        \hline
+        Problemen en knelpunten: & item 42 \\
+        \hline
+        Oplossingen: & item 52 \\
+        \hline
+        Persoonlijke reflectie: & item 62 \\
+        \hline
+        Planning volgende week: & item 72 \\
+        \hline
+      \end{tabularx}
+
+    \subsection{Eindrapportage}
+      De eindrapportage wordt aan het einde van de stageperiode ingevuld. Hierin worden de
+      volgende punten aangehaald:\\
+        • Opgedane ervaring\\
+        • Verloop van het project\\
+        • Gesignaleerde problemen\\
+        • Gekozen oplossing\\
+        • Persoonlijke reflectie\\
+        • Eindbesluit (het eindresultaat)\\
+      Dit is uiteindelijk ook je besluitvorming voor je eindwerk.
+
   \section{Terugkoppelingsformulieren}
-  \subsection{Stagebespreking}
+    \subsection{Stagebespreking}
+      Telkens wanneer je een bespreing hebt, zowel met de hogeschoolpromotor als
+      de bedrijfspromotor, vul je onderstaand formulier in:\par
+      \begin{tabularx}{\textwidth}{| l | X |}
+        \hline
+        Volgnummer: & Bv. Stage2019-01\\
+        \hline
+        Datum: & \\
+        \hline
+        Besproken punten: & \\
+        \hline
+        Besluiten: & \\
+        Acties: & \\
+        Afspraken: & \\
+        \hline
+        Goedgekeuring & \\
+        \hline
+      \end{tabularx}
 \end{document}
