@@ -42,7 +42,8 @@
     \end{tabbing}
     Stageproject: \textbf{Navigating Smart UAV systems in dynamic environments}
     \begin{addmargin}[5ex]{0pt}
-      Het doel van de stage is om een flexibele multi-agentsysteem te ontwikkelen voor robots. Er zullen ook enkele demonstraties uitgewerkt moeten worden om dit systeem werkend te zien.
+      Het doel van de stage is om een generieke architectuur te ontwikkelen voor verschillende UAV's.
+      Er zulen ook enkele demonstraties uitgewerkt worden op dit systeem met toepassingen van SLAM-algoritmen.
     \end{addmargin}
 
   \section{Plan van aanpak}
@@ -78,9 +79,12 @@
       % geproduceerd gaat worden, wordt in de doelstelling uiteengezet.
       Het project is opgestart om een basis architectuur te hebben zodat er makkelijk en
       snel een ontwikkelingsomgeving ter beschikking is. Verder wordt er ook onderzoek gedaan
-      naar verschillende SLAM algoritmes
+      naar verschillende SLAM algoritmes en deze implementeren. Het gaat over indoor en outdoor
+      implementaties, ik ga mij vooral focussen op de indoor algoritmes.\par
       Het project heeft al meerdere voorafgaande fasen gehad. Zo heeft een IT-project
-      en een stage al onderzoek en implementaties gedaan over dit onderwerp.
+      de architectuur al geïmplementeerd in een specifieke toepassen. Er gaat dus nu een meer generieke
+      structuur moeten geschreven worden. Er is ook al een stage rond het onderzoek van SLAM-algoritmen
+      gegaan, dit moet verder uitgebreidt worden en specifieke toepassingen ervoor ontwikkelen.
 
     \newpage
 
@@ -89,12 +93,12 @@
       % omschreven. Onder omschrijving verstaan we een bondige en relevante
       % beschrijving van de doelstellingen die je wil verwezenlijken, de methodiek die je
       % kan/gaat aanwenden, ...
-      Er moet een architectuur gemaakt worden voor multi-agentsystemen. Hiervoor
-      worden een aantal voorbeelden geïmplementeerd worden ter demonstratie van
-      de geleverde architectuur. Ook een hierarchical state machine zal ontwikkeld
-      moeten worden voor om de computers beslissingen te laten nemen.\par
-      Het begint bij een grondige analyse van verschillende multi-agent besluitvorming
-      systemen. En een uitwerking van deze systemen. Met uiteindelijk ook een thesis.
+      Er moet een architectuur gemaakt worden voor multi-agentsystemen. Inclusief documentatie
+      hoe deze gebruikt kan worden. Het gaat ook gebruikt worden om verschillende toepassingen
+      uit te werken. Deze toepassingen implementeren verschillende SLAM-algoritmen waar tijdens
+      de stage onderzoek naar gedaan wordt. Er wordt een onderscheid gemaakt tussen indoor en outdoor
+      toepassingen, dus er zijn minimaal 2 uitwerkingen die opgeleverd moeten worden.\par
+      Het onderzoek en de wijze waarop wordt uitgeschreven in een thesis.
 
     \newpage
 
@@ -146,88 +150,106 @@
     \newpage
 
   \subsection{Tijdsplanning}
-    Voeg hier je planning toe voor de 12 weken van je stageperiode.\\
-    Gebruik hiervoor de technieken die je hebt aangeleerd in het opleidingsonderdeel
-    Business Flow Advanced 1.\\
-    Indien je stagebedrijf een andere methode hanteert voor het opstellen van een
-    planning, dien je deze methode over te nemen.\par
-    \underline{Effectief verloop van het project}\par
-    Bijkomend moet op dezelfde wijze het effectieve verloop van het project
-    weergegeven worden.\\
-    Zo zal je waarschijnlijk ook merken dat de planning, door omstandigheden, niet voor
-    honderd procent gevolgd kan worden. Maar een planning geeft jezelf en je promotoren
-    wel een goed beeld van nog moet gebeuren: in welke fase je op een bepaald moment zit
-    of zou moeten zitten. Dit kan heel eenvoudig door een bijkomende balk te gebruiken in
-    een andere kleur.\par
-    Wanneer jullie met meerderen aan een project werken, moet uit de planning
-    duidelijk afgeleid kunnen worden welke taken voor welke student gelden.
+    % Voeg hier je planning toe voor de 12 weken van je stageperiode.\\
+    % Gebruik hiervoor de technieken die je hebt aangeleerd in het opleidingsonderdeel
+    % Business Flow Advanced 1.\\
+    % Indien je stagebedrijf een andere methode hanteert voor het opstellen van een
+    % planning, dien je deze methode over te nemen.\par
+    % \underline{Effectief verloop van het project}\par
+    % Bijkomend moet op dezelfde wijze het effectieve verloop van het project
+    % weergegeven worden.\\
+    % Zo zal je waarschijnlijk ook merken dat de planning, door omstandigheden, niet voor
+    % honderd procent gevolgd kan worden. Maar een planning geeft jezelf en je promotoren
+    % wel een goed beeld van nog moet gebeuren: in welke fase je op een bepaald moment zit
+    % of zou moeten zitten. Dit kan heel eenvoudig door een bijkomende balk te gebruiken in
+    % een andere kleur.\par
+    % Wanneer jullie met meerderen aan een project werken, moet uit de planning
+    % duidelijk afgeleid kunnen worden welke taken voor welke student gelden.
 
   \subsection{Bronnen}
-    Er dient altijd expliciet te worden aangegeven op welke bronnen en naslagwerken
-    het eindwerk berust. Door systematisch hierin de bronnen te vermelden verliest
-    men achteraf niet te veel tijd om de bronnen terug te gaan opzoeken. Het kan
-    om schriftelijke, mondelinge een elektronische bronnen gaan.\par
-    Voor de omschrijving gelden enkele vaste regels die vermeld staan in de
-    cursus op BlackBoard.
+    % Er dient altijd expliciet te worden aangegeven op welke bronnen en naslagwerken
+    % het eindwerk berust. Door systematisch hierin de bronnen te vermelden verliest
+    % men achteraf niet te veel tijd om de bronnen terug te gaan opzoeken. Het kan
+    % om schriftelijke, mondelinge een elektronische bronnen gaan.\par
+    % Voor de omschrijving gelden enkele vaste regels die vermeld staan in de
+    % cursus op BlackBoard.
 
   \section{Rapportage}
     \subsection{Wekelijkse rapportage}
-      Deze tabel wordt tijdens de stageperiode voor iedere week ingevuld.\par
-      \underline{Met persoonlijke reflectie bedoelen we:}\par
-      Wat ging goed, wat ging minder goed, wat heb je geleerd, in welke mate heeft de
-      opleiding je kunnen helpen bij het uitvoeren van de opdracht. Welke waren je
-      valkuilen? Wat is de meerwaarde voor het bedrijf? Wat is de meerwaarde voor het
-      team (stageteam en bedrijfsteam)? Welke softskills heb je bijgeleerd? Wat zou je
-      anders doen als je de stage(week) opnieuw zou beginnen? Wat zou beter gekund hebben?
-      Welke lessen heb je geleerd ? Op welke punten ga je je de volgende keer focussen
-      en hoe ga je dit aanpakken?
+      % Deze tabel wordt tijdens de stageperiode voor iedere week ingevuld.
+      % Met persoonlijke reflectie bedoelen we:
+      % Wat ging goed, wat ging minder goed, wat heb je geleerd, in welke mate heeft de
+      % opleiding je kunnen helpen bij het uitvoeren van de opdracht. Welke waren je
+      % valkuilen? Wat is de meerwaarde voor het bedrijf? Wat is de meerwaarde voor het
+      % team (stageteam en bedrijfsteam)? Welke softskills heb je bijgeleerd? Wat zou je
+      % anders doen als je de stage(week) opnieuw zou beginnen? Wat zou beter gekund hebben?
+      % Welke lessen heb je geleerd ? Op welke punten ga je je de volgende keer focussen
+      % en hoe ga je dit aanpakken?
 
       \begin{tabularx}{\textwidth}{| l | X |}
         \hline
-        Datum: & item 12 \\
+        Datum: & 24/02/2020 - 28/02/2020\\
         \hline
-        Geplande taken: & item 22 \\
-        \hline 
-        Stand van zaken: & item 32 \\
+        Geplande taken: & 
+        \begin{outline}
+          \1 Workstation installeren
+          \1 Bestaande code IT-Project omvormen
+          \1 SLAM research/begin implementatie (RTAB-Map)
+          \1 Gazebo werelden maken
+          \1 Modellen iris UAV aanpassen
+        \end{outline}\\
         \hline
-        Problemen en knelpunten: & item 42 \\
+        Stand van zaken: & 
+        De meeste van de geplande taken zijn voltooid. De research naar SLAM nemen we mee
+        naar volgende week. Er zullen ook nog SLAM-algoritmen geïmplementeerd moeten worden,
+        maar dit is wisten we op voorhand. Ook moeten we de iris UAV modellen nog aanpassen,
+        Hiervooor hebben we een issue gepost op het forum van PX4.\\
         \hline
-        Oplossingen: & item 52 \\
+        Problemen en knelpunten: & 
+        Iris UAV modellen aanpassen.\\
         \hline
-        Persoonlijke reflectie: & item 62 \\
+        Oplossingen: & 
+        Issue gepost op het forum van PX4.\\
         \hline
-        Planning volgende week: & item 72 \\
+        Persoonlijke reflectie: & item 62\\
+        \hline
+        Planning volgende week: & 
+        \begin{outline}
+          \1 RTAB-Map verder implementeren
+          \1 Onderzoek SLAM-algoritmen
+          \1 Implementatie andere algoritmen
+        \end{outline}\\
         \hline
       \end{tabularx}
 
     \subsection{Eindrapportage}
-      De eindrapportage wordt aan het einde van de stageperiode ingevuld. Hierin worden de
-      volgende punten aangehaald:\\
-        • Opgedane ervaring\\
-        • Verloop van het project\\
-        • Gesignaleerde problemen\\
-        • Gekozen oplossing\\
-        • Persoonlijke reflectie\\
-        • Eindbesluit (het eindresultaat)\\
-      Dit is uiteindelijk ook je besluitvorming voor je eindwerk.
+      % De eindrapportage wordt aan het einde van de stageperiode ingevuld. Hierin worden de
+      % volgende punten aangehaald:\\
+      %   • Opgedane ervaring\\
+      %   • Verloop van het project\\
+      %   • Gesignaleerde problemen\\
+      %   • Gekozen oplossing\\
+      %   • Persoonlijke reflectie\\
+      %   • Eindbesluit (het eindresultaat)\\
+      % Dit is uiteindelijk ook je besluitvorming voor je eindwerk.
 
   \section{Terugkoppelingsformulieren}
     \subsection{Stagebespreking}
-      Telkens wanneer je een bespreing hebt, zowel met de hogeschoolpromotor als
-      de bedrijfspromotor, vul je onderstaand formulier in:\par
-      \begin{tabularx}{\textwidth}{| l | X |}
-        \hline
-        Volgnummer: & Bv. Stage2019-01\\
-        \hline
-        Datum: & \\
-        \hline
-        Besproken punten: & \\
-        \hline
-        Besluiten: & \\
-        Acties: & \\
-        Afspraken: & \\
-        \hline
-        Goedgekeuring & \\
-        \hline
-      \end{tabularx}
+      % Telkens wanneer je een bespreing hebt, zowel met de hogeschoolpromotor als
+      % de bedrijfspromotor, vul je onderstaand formulier in:\par
+      % \begin{tabularx}{\textwidth}{| l | X |}
+      %   \hline
+      %   Volgnummer: & Bv. Stage2019-01\\
+      %   \hline
+      %   Datum: & \\
+      %   \hline
+      %   Besproken punten: & \\
+      %   \hline
+      %   Besluiten: & \\
+      %   Acties: & \\
+      %   Afspraken: & \\
+      %   \hline
+      %   Goedgekeuring & \\
+      %   \hline
+      % \end{tabularx}
 \end{document}
