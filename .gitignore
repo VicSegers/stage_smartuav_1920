@@ -278,3 +278,6 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+# Custom ignores
+*.ist

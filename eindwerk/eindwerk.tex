@@ -1,0 +1,75 @@
+% twoside in \documentclass for printing!!!
+\documentclass[12pt,a4paper]{report}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{a4wide}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage[automake]{glossaries}
+\makeglossaries
+\usepackage{xcolor}
+\definecolor{pxlgreen}{RGB}{73,153,20}
+\usepackage{tabularx}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\usepackage{lmodern}
+
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{Vic Segers}
+\cfoot{Navigating Smart UAV systems in dynamic environments}
+\rfoot{\thepage}
+
+\renewcommand{\contentsname}{Table of contents}
+
+\newcommand\blankpage{\null\thispagestyle{empty}\newpage}
+
+\renewcommand{\thepage}{\roman{page}}
+
+\newglossaryentry{SLAM}{name={SLAM}, description={Simultaneous localization and mapping}}
+
+\begin{document}
+  \input{titlepage}
+
+  \blankpage
+
+  \input{titlepage}
+
+  \pagenumbering{roman}
+  \chapter*{Acknowledgements}
+
+  \chapter*{Abstract}
+
+  \tableofcontents
+
+  \listoffigures
+
+  \listoftables
+  \printglossary[title={List of Abbreviations}]
+
+  \pagenumbering{arabic}
+  \chapter{Introduction} 
+
+  \chapter{Traineeship report}
+
+  \chapter{About the company}
+
+  \chapter{Chapter}
+
+  \chapter{Research topic: Indoor \gls{SLAM}}
+  \input{chapters/researchtopic.tex}
+
+  \chapter*{Conclusion}
+
+  \chapter*{Bibliographical references}
+  %with biblatex
+
+  % \appendix
+  \chapter{Appendices}
+    \section{Description Appendix A}
+    \section{Description Appendix B}
+    \section{Description Appendix C}
+\end{document}
