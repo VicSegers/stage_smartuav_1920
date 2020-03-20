@@ -12,6 +12,15 @@
 \usepackage{tabularx}
 \newcolumntype{C}{>{\centering\arraybackslash}X}
 \usepackage{lmodern}
+\usepackage{hyperref}
+\hypersetup{%
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=black
+}
+\usepackage{outlines}
 
 \usepackage{fancyhdr}
 \fancypagestyle{plain}{}
@@ -43,6 +52,7 @@
 
   \chapter*{Abstract}
 
+
   \tableofcontents
 
   \listoffigures
@@ -59,8 +69,8 @@
 
   \chapter{Chapter}
 
-  \chapter{Research topic: Indoor \gls{SLAM}}
-  \input{chapters/researchtopic.tex}
+  \chapter{Research topic}
+  \input{chapters/researchtopic}
 
   \chapter*{Conclusion}
 
