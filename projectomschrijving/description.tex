@@ -1,9 +1,16 @@
-The center of expertise PXL Smart ICT has an ongoing project to map an unknown environment, in- and outdoors. The mapping is being done by a UAV, an unmanned aerial vehicle, which flies autonomously in its environment. The UAV uses an algorithm called SLAM, simultaneous localization and mapping, that creates a map and localizes itself in this map.
+The center of expertise PXL Smart ICT, part of the PXL University of Applied Sciences and Arts research department, has an ongoing for enabling IT companies to implement UAV, unmanned aerial vehicle, projects via rapid robot prototyping.
 
-The algorithm behaves the same way a human being would when dropped in an unknown environment. A human being looks around and searches for reference points in that environment as landmarks for its own localization. However UAV uses sensors, instead of senses, to get information of its surroundings and uses this to search for reference points. When flying, it can estimate its movement based on the movement of these reference points.
+The goals of our project is to update and fine-tune an existing architecture, do research into the realm of simultaneous localization and mapping (SLAM) algorithms and showcases that use the architecture and implement these SLAM algorithms for flying autonomously in an unknown environment.
 
-The technologies used in this project are ROS (Robotic Operating System) in combination with MAVROS (implementation of MAVLink in ROS) to send messages to a PX4, the autopilot. For safety and testing purposes, the entire project is developed in a virtual environment named Gazebo. To make the project scalable, modular and consistent a Multi-Docker System is used.
+A SLAM algorithm behaves the same way a human being would when dropped in an unknown environment. A human being opens her or his eyes and looks around in search of reference points in their environment. These reference points are used as landmakrs for their own localization. However, a UAV uses sensors, instead of senses, to get information of its surroundings and uses this to search for reference points. When flying, it can estimate its movement based on the movement of these landmarks.
 
-The project is split into two parts: an architecture and a showcase. The architecture, which can handle multiple UAVs, contains a lightweight system for developers to start working with MAVROS and PX4 in a clean environment simulated in Gazebo. The showcase uses the architecture as a base and adds implementations of some SLAM algorithms. In the showcase the UAV is able to fly autonomously in an unknown environment.
+The technologies used are ROS, MAVROS, PX4, Gazebo and Docker. ROS, Robotic Operating System, is an open source set of software libraries and tools, currently viewed as the standard for developing robotics projects. MAVROS is a ROS implementation of MAVLink, Micro Air Vehicle Link, a lightweight messaging protocol for communicating with drones. The open source autopilot used is a PX4, it translates messages from MAVROS to actual commands for the UAV. Gazebo is a tool to simulate a virtual environment. To make system flexible, modular and consistent a multi-container Docker environment is used.
 
-TODO: SLOT
+In the future, the ROS version may be upgraded to the one that will be released at the end of May. Because of the structure of ROS2, upgrading to this would require another architecture.
+
+% bronnen
+% https://www.ros.org/
+% https://mavlink.io/en/
+% https://px4.io/
+% https://opensource.com/resources/what-docker
+% http://gazebosim.org/
