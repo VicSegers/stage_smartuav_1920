@@ -1,44 +1,6 @@
 % twoside in \documentclass for printing!!!
 \documentclass[12pt,a4paper]{report}
-\usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{a4wide}
-\usepackage{graphicx}
-\graphicspath{{images/}}
-\usepackage[automake]{glossaries}
-\makeglossaries
-\usepackage{xcolor}
-\definecolor{pxlgreen}{RGB}{73,153,20}
-\usepackage{tabularx}
-\newcolumntype{C}{>{\centering\arraybackslash}X}
-\usepackage{lmodern}
-\usepackage{hyperref}
-\hypersetup{%
-  colorlinks,
-  citecolor=black,
-  filecolor=black,
-  linkcolor=black,
-  urlcolor=black
-}
-\usepackage{outlines}
-
-\usepackage{fancyhdr}
-\fancypagestyle{plain}{}
-\renewcommand{\headrulewidth}{0pt}
-\lhead{}
-\chead{}
-\rhead{}
-\lfoot{Vic Segers}
-\cfoot{Navigating Smart UAV systems in dynamic environments}
-\rfoot{\thepage}
-
-\renewcommand{\contentsname}{Table of contents}
-
-\newcommand\blankpage{\null\thispagestyle{empty}\newpage}
-
-\renewcommand{\thepage}{\roman{page}}
-
-\newglossaryentry{SLAM}{name={SLAM}, description={Simultaneous localization and mapping}}
+\usepackage{styles}
 
 \begin{document}
   \input{titlepage}
@@ -48,38 +10,47 @@
   \input{titlepage}
 
   \pagenumbering{roman}
-  \chapter*{Acknowledgements}
+  \nonumsection{Acknowledgements}
 
-  \chapter*{Abstract}
-
+  \nonumsection{Abstract}
 
   \tableofcontents
 
   \listoffigures
 
   \listoftables
+
   \printglossary[title={List of Abbreviations}]
 
   \pagenumbering{arabic}
-  \chapter{Introduction} 
+  \nonumsection{Introduction}
 
   \chapter{Traineeship report}
-
-  \chapter{About the company}
-
-  \chapter{Chapter}
+    \section{About the company}
+    \section{Section}
+      \subsection{Subsection}
+        \subsubsection{Subsubsection}
 
   \chapter{Research topic}
+    \section{How is a UAV able to orient itself in an unknown environment?}
+      \subsection{How is a UAV able to observe its environment?}
+        \subsubsection{Which sensors are eligible for a UAV to observe an environment?}
+      \subsection{How is a UAV able to map its environment and its location in this mapped environment?}
+    \section{How can a UAV find an executable path from its location to a goal?}
+      \subsection{How can a UAV determine what an executable path is?}
+    \section{How is the UAV able to execute a path?}
   \input{chapters/researchtopic}
 
-  \chapter*{Conclusion}
+  \addtocontents{toc}{\vspace{\normalbaselineskip}}
 
-  \chapter*{Bibliographical references}
+  \nonumsection{Conclusion}
+  \nonumsection{Bibliographical references}
   %with biblatex
 
+  \renewcommand\thesubsection{\Alph{subsection}}  % Alphabetical numbering for subsections
   % \appendix
-  \chapter{Appendices}
-    \section{Description Appendix A}
-    \section{Description Appendix B}
-    \section{Description Appendix C}
+  \nonumsection{Appendices}
+    \subsection{Description Appendix A}
+    \subsection{Description Appendix B}
+    \subsection{Description Appendix C}
 \end{document}
