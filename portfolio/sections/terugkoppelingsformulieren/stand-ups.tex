@@ -1,0 +1,6 @@
+\newcounter{standup}
+\forloop{standup}{1}{\value{standup} < 6}
+{%
+  \subsubsection{Week \thestandup}
+  \input{sections/terugkoppelingsformulieren/stand-ups/stand-up_\thestandup}
+}
