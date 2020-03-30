@@ -1,20 +1,10 @@
-\def\student{Vic Segers}
-\def\bedrijfspromotor{Tim Dupont}
-\def\hogeschoolpromotor{Tim Dupont}
-\def\stagebedrijf{Expertisecentrum PXL Smart ICT}
-
 \documentclass[a4paper]{article}
 \usepackage{styles}
 
 \begin{document}
   \input{titlepage}
 
-  \begingroup
-    \hypersetup{linkcolor=black}  % Black links in table of contents
-    \tableofcontents
-  \endgroup
-
-  \pagenumbering{arabic}  % Start page numbering
+  \tableofcontents
 
   \section{Informatiefiche}
   \input{sections/informatiefiche}
@@ -36,7 +26,8 @@
     \input{sections/plan_van_aanpak/tijdsplanning}
     \newpage
     \subsection{Bronnen}
-    \input{sections/plan_van_aanpak/bronnen}
+    \nocite{*}  % print all sources (also non cited)
+    \printbibliography[heading=none]
 
   \section{Rapportage}
     \subsection{Wekelijkse rapportage}
