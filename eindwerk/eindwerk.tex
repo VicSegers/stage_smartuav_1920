@@ -1,56 +1,129 @@
-% twoside in \documentclass for printing!!!
-\documentclass[12pt,a4paper]{report}
+\documentclass[12pt, a4paper]{report}
 \usepackage{styles}
 
 \begin{document}
   \input{titlepage}
-
   \blankpage
-
   \input{titlepage}
 
+  \pagestyle{plain}
   \pagenumbering{roman}
-  \nonumsection{Acknowledgements}
-
-  \nonumsection{Abstract}
-
+  \nonumchapter{Acknowledgements}
+  \nonumchapter{Abstract}
+  \input{chapters/abstract.tex}
+  \newpage
+  \phantomsection
+  \addcontentsline{toc}{chapter}{Table of Contents}
   \tableofcontents
-
+  \newpage
+  \phantomsection
+  \addcontentsline{toc}{chapter}{List of Figures}
   \listoffigures
-
+  \newpage
+  \phantomsection
+  \addcontentsline{toc}{chapter}{List of Tables}
   \listoftables
-
-  \printglossary[title={List of Abbreviations}]
-
+  \newpage
+  \chapter*{List of Abbreviations}
+  \input{abbreviations.tex}
+  \newpage
   \pagenumbering{arabic}
-  \nonumsection{Introduction}
+  \nonumchapter{Introduction}
+  \input{chapters/introduction.tex}
 
   \chapter{Traineeship report}
     \section{About the company}
-    \section{Section}
-      \subsection{Subsection}
-        \subsubsection{Subsubsection}
+    \input{chapters/traineeship_report/about_the_company.tex}
+    \newpage
+    \section{Technologies}
+    \input{chapters/traineeship_report/technologies.tex}
+      \subsection{ROS}
+      \input{chapters/traineeship_report/technologies/ros.tex}
+      \newpage
+      \subsection{Gazebo}
+      \input{chapters/traineeship_report/technologies/gazebo.tex}
+      \subsection{MAVROS}
+      \input{chapters/traineeship_report/technologies/mavros.tex}
+      \newpage
+      \subsection{PX4 Autopilot}
+      \input{chapters/traineeship_report/technologies/px4.tex}
+      \subsection{Python}
+      \input{chapters/traineeship_report/technologies/python.tex}
+      \newpage
+      \subsection{Docker}
+      \input{chapters/traineeship_report/technologies/docker.tex}
+      \subsection{RViz}
+      \input{chapters/traineeship_report/technologies/rviz.tex}
+    \section{Implementation}
+    \input{chapters/traineeship_report/implementation.tex}
+      \subsection{Overview}
+      \input{chapters/traineeship_report/implementation/overview.tex}
+      \newpage
+      \subsection{Architecture}
+      \input{chapters/traineeship_report/implementation/architecture.tex}
+      \subsection{Showcase}
+      \input{chapters/traineeship_report/implementation/showcase.tex}
 
   \chapter{Research topic}
-    \section{How is a UAV able to orient itself in an unknown environment?}
-      \subsection{How is a UAV able to observe its environment?}
-        \subsubsection{Which sensors are eligible for a UAV to observe an environment?}
-      \subsection{How is a UAV able to map its environment and its location in this mapped environment?}
-    \section{How can a UAV find an executable path from its location to a goal?}
-      \subsection{How can a UAV determine what an executable path is?}
-    \section{How is the UAV able to execute a path?}
-  \input{chapters/researchtopic}
+    \input{chapters/research_topic.tex}
+    \section{Dynamic environment}
+    \input{chapters/research_topic/dynamic_environment.tex}
+      \subsection{Definition}
+      \input{chapters/research_topic/dynamic_environment/definition.tex}
+      \subsection{Properties}
+      \input{chapters/research_topic/dynamic_environment/properties.tex}
+      \newpage
+        \subsubsection{Indoor}
+        \input{chapters/research_topic/dynamic_environment/properties/indoor.tex}
+        \subsubsection{Dynamic}
+        \input{chapters/research_topic/dynamic_environment/properties/dynamic.tex}
+        \newpage
+    \section{Orientation}
+    \input{chapters/research_topic/orientation.tex}
+      \subsection{Observing}
+      \input{chapters/research_topic/orientation/observing.tex}
+        \subsubsection{Sensors}
+        \input{chapters/research_topic/orientation/observing/sensors.tex}
+        \subsubsection{Dynamic properties}
+        \input{chapters/research_topic/orientation/observing/dynamic_properties.tex}
+        \newpage
+      \subsection{Mapping and localization}
+      \input{chapters/research_topic/orientation/mapping_and_localization.tex}
+      \subsection{SLAM algorithms}
+      \input{chapters/research_topic/orientation/slam_algorithms.tex}
+        \subsubsection{ORB-SLAM2}
+        \input{chapters/research_topic/orientation/slam_algorithms/orb_slam2.tex}
+        \subsubsection{Cartographer}
+        \input{chapters/research_topic/orientation/slam_algorithms/cartographer.tex}
+        \newpage
+        \subsubsection{BLAM!}
+        \input{chapters/research_topic/orientation/slam_algorithms/blam.tex}
+        \subsubsection{hdl\_graph\_slam}
+        \input{chapters/research_topic/orientation/slam_algorithms/hdl_graph_slam.tex}
+        \subsubsection{RTAB-Map}
+        \input{chapters/research_topic/orientation/slam_algorithms/rtab_map.tex}
+        \newpage
+    \section{Path planning}
+    \input{chapters/research_topic/path_planning.tex}
+      \subsection{Executable path}
+      \input{chapters/research_topic/path_planning/executable_path.tex}
+      \subsection{Goal}
+      \input{chapters/research_topic/path_planning/goal.tex}
+      \newpage
+    \section{Path execution}
+    \input{chapters/research_topic/path_execution.tex}
+    \newpage
+    \section{Difficulties}
+    \input{chapters/research_topic/difficulties.tex}
 
-  \addtocontents{toc}{\vspace{\normalbaselineskip}}
+  \nonumchapter{Conclusion}
+  \nonumchapter{Bibliographical references}
+  \printbibliography[heading=none]
 
-  \nonumsection{Conclusion}
-  \nonumsection{Bibliographical references}
-  %with biblatex
-
-  \renewcommand\thesubsection{\Alph{subsection}}  % Alphabetical numbering for subsections
+  % \renewcommand\thesection{\Alph{section}}  % Alphabetical numbering for subsections
   % \appendix
-  \nonumsection{Appendices}
-    \subsection{Description Appendix A}
-    \subsection{Description Appendix B}
-    \subsection{Description Appendix C}
+  % \nonumchapter{Appendices}
+  %   \section{Description Appendix A}
+  %   \section{Description Appendix B}
+  %   \section{Description Appendix C}
 \end{document}

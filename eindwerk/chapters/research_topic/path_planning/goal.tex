@@ -1,0 +1,3 @@
+The goal is defined by a \acs{qrcode} placed in the world. One \acs{uav} explores the indoor environment searching for the \acs{qrcode}. Once found, another \acs{uav} plans a path with the \acs{qrcode} as its goal.
+
+The \acs{qrcode} is generated with a repository that outputs a model for Gazebo with an image as input. The \acs{uav} can detect this code with the use of a \acs{ros} package. Once a \acs{qrcode} is detected, a message is published with its location for path planning. \cite{github_ar_tags_gazebo} \cite{github_qr_detector}
