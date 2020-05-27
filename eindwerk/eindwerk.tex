@@ -23,8 +23,7 @@
   \phantomsection
   \addcontentsline{toc}{chapter}{List of Tables}
   \listoftables
-  \newpage
-  \chapter*{List of Abbreviations}
+  \nonumchapter{List of Abbreviations}
   \input{abbreviations.tex}
   \newpage
   \pagenumbering{arabic}
@@ -37,11 +36,13 @@
     \newpage
     \section{Technologies}
     \input{chapters/traineeship_report/technologies.tex}
+    \newpage
       \subsection{ROS}
       \input{chapters/traineeship_report/technologies/ros.tex}
       \newpage
       \subsection{Gazebo}
       \input{chapters/traineeship_report/technologies/gazebo.tex}
+      \newpage
       \subsection{MAVROS}
       \input{chapters/traineeship_report/technologies/mavros.tex}
       \newpage
