@@ -1,5 +1,5 @@
 \newcounter{demo}
-\forloop{demo}{1}{\value{demo} < 4}
+\forloop{demo}{1}{\not{\value{demo} > 4}}
 {%
   \subsubsection{Demo \thedemo}
   \input{sections/terugkoppelingsformulieren/demos/demo_\thedemo}

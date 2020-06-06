@@ -1,0 +1,26 @@
+\begin{tabularx}{\textwidth}{| l | X |}
+  \hline
+  Datum: & 27/04/2020 - 01/05/2020\\
+  \hline
+  Geplande taken: &
+  \begin{compactitem}
+    \item \hl{Afwerking portfolio en taalversie eindwerk}
+    \item \hl{Andere aansturing van UAV onderzoeken}
+    \item \hl{Verkeerde loopclosures van RTAB-Map fixen}
+  \end{compactitem}\\
+  \hline
+  Stand van zaken: & \hl{De UAV kan een vast pad vliegen en ondertussen SLAM'en. Tijdens het onderzoek naar path planning wat de volgende stap is, moeten er nog een paar bugs gefixt worden die een direct probleem vormen.}\\
+  \hline
+  Problemen en knelpunten: & \hl{De UAV vliegt niet in een rechte lijn van punt naar punt, maar met een horizontale afwijking. RTAB-Map geeft verkeerde loopclosures door een gebrek aan textures.}\\
+  \hline
+  Oplossingen: & \hl{De UAV aansturen aan de hand van velocity in plaats van position. Toevoeging objecten met verschillende textures.}\\
+  \hline
+  Persoonlijke reflectie: & \hl{De aansturing op basis van velocity geeft dezelfde output als het vliegen op punten. De toevoeging van de objecten maakt de loopclosures minder frequent, maar ze zijn er nog.}\\
+  \hline
+  Planning volgende week: &
+  \begin{compactitem}
+    \item \hl{Optimalisaties RTAB-Map}
+    \item \hl{Onderzoek missions}
+  \end{compactitem}\\
+  \hline
+\end{tabularx}

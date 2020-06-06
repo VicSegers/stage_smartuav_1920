@@ -1,5 +1,5 @@
 \newcounter{standup}
-\forloop{standup}{1}{\value{standup} < 7}
+\forloop{standup}{1}{\not{\value{standup} > 11}}
 {%
   \subsubsection{Week \thestandup}
   \input{sections/terugkoppelingsformulieren/stand-ups/stand-up_\thestandup}

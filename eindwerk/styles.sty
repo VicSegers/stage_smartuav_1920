@@ -7,9 +7,10 @@
 \usepackage{xcolor}
 \definecolor{pxlgreen}{RGB}{73,153,20}
 \usepackage{sectsty}
+\usepackage{tabulary}
 \usepackage{lmodern}
 \usepackage{hyperref}
-\hypersetup{%
+\hypersetup{
   colorlinks,
   citecolor=black,
   filecolor=black,
@@ -18,32 +19,47 @@
 }
 \usepackage{outlines}
 
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+
 \setlength{\parindent}{0em}
 \setlength{\parskip}{1em}
 
-\usepackage{soul}
 \usepackage{hyphenat}
 \usepackage{acronym}
 
 \usepackage{tocstyle}
 \usetocstyle{classic}
-\settocfeature{entryvskip}{9.9pt}
+\settocfeature{entryvskip}{7.8pt}
 
 \usepackage[backend=biber, style=ieee, urldate=comp]{biblatex}
 \addbibresource{bronnen.bib}
 \usepackage{csquotes}
 
 \usepackage{fancyhdr}
-\fancypagestyle{plain}{}
-\renewcommand{\headrulewidth}{0pt}
-\lhead{}
-\chead{}
-\rhead{}
-\lfoot{Vic Segers}
-\cfoot{\acsp{uav} autonomously navigating dynamic environments}
-\rfoot{\thepage}
-\renewcommand{\footrulewidth}{2pt}
-\renewcommand{\footrule}{\hbox to\headwidth{\color{pxlgreen}\leaders\hrule height \footrulewidth\hfill}}
+\fancypagestyle{titlepage}{
+  \renewcommand{\headrulewidth}{0pt}
+  \lhead{}
+  \chead{}
+  \rhead{}
+  \cfoot{}
+  \rfoot{\large\textbf{Bachelor paper academic year 2019-2020}}
+  \renewcommand{\footrulewidth}{2pt}
+  \renewcommand{\footrule}{\hbox to\headwidth{\color{pxlgreen}\leaders\hrule height \footrulewidth\hfill}}
+}
+
+\fancypagestyle{plain}{
+  \renewcommand{\headrulewidth}{0pt}
+  \lhead{}
+  \chead{}
+  \rhead{}
+  \lfoot{Vic Segers}
+  \cfoot{\acsp{uav} autonomously navigating dynamic indoor environments}
+  \rfoot{\thepage}
+  \renewcommand{\footrulewidth}{2pt}
+  \renewcommand{\footrule}{\hbox to\headwidth{\color{pxlgreen}\leaders\hrule height \footrulewidth\hfill}}
+}
 
 \addto\captionsenglish{\renewcommand*\contentsname{\color{pxlgreen}Table of Contents}}
 \addto\captionsenglish{\renewcommand*\listfigurename{\color{pxlgreen}List of Figures}}
@@ -83,7 +99,15 @@
 \cftsetindents{subsubsection}{6em}{3em}
 \cftsetindents{paragraph}{9em}{4em}
 
-\newcommand\invisiblechapter[1]{%
-  \refstepcounter{chapter}%
+\newcommand*{\noaddvspace}{\renewcommand*{\addvspace}[1]{}}
+\addtocontents{lof}{\protect\noaddvspace}
+\addtocontents{lof}{\linespread{1.5}\selectfont}
+\addtocontents{lot}{\protect\noaddvspace}
+\addtocontents{lot}{\linespread{1.5}\selectfont}
+
+\newcommand\invisiblechapter[1]{
+  \refstepcounter{chapter}
   \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}%
   \chaptermark{#1}}
+
+\renewcommand\thefigure{\arabic{figure}}

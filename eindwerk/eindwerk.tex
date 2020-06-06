@@ -23,8 +23,7 @@
   \phantomsection
   \addcontentsline{toc}{chapter}{List of Tables}
   \listoftables
-  \newpage
-  \chapter*{List of Abbreviations}
+  \nonumchapter{List of Abbreviations}
   \input{abbreviations.tex}
   \newpage
   \pagenumbering{arabic}
@@ -37,19 +36,19 @@
     \newpage
     \section{Technologies}
     \input{chapters/traineeship_report/technologies.tex}
+    \newpage
       \subsection{ROS}
       \input{chapters/traineeship_report/technologies/ros.tex}
-      \newpage
+      \clearpage
       \subsection{Gazebo}
       \input{chapters/traineeship_report/technologies/gazebo.tex}
       \subsection{MAVROS}
       \input{chapters/traineeship_report/technologies/mavros.tex}
-      \newpage
       \subsection{PX4 Autopilot}
       \input{chapters/traineeship_report/technologies/px4.tex}
       \subsection{Python}
       \input{chapters/traineeship_report/technologies/python.tex}
-      \newpage
+      \clearpage
       \subsection{Docker}
       \input{chapters/traineeship_report/technologies/docker.tex}
       \subsection{RViz}
@@ -102,6 +101,8 @@
         \input{chapters/research_topic/orientation/slam_algorithms/hdl_graph_slam.tex}
         \subsubsection{RTAB-Map}
         \input{chapters/research_topic/orientation/slam_algorithms/rtab_map.tex}
+        \subsubsection{Comparison SLAM algorithms}
+        \input{chapters/research_topic/orientation/slam_algorithms/comparison_algorithms.tex}
         \newpage
     \section{Path planning}
     \input{chapters/research_topic/path_planning.tex}
@@ -109,6 +110,11 @@
       \input{chapters/research_topic/path_planning/executable_path.tex}
       \subsection{Goal}
       \input{chapters/research_topic/path_planning/goal.tex}
+      \subsection{Search algorithms}
+        \subsubsection{Dijkstra}
+        \subsubsection{Theta*}
+        \subsubsection{A*}
+        \subsubsection{Comparison search algorithms}
       \newpage
     \section{Path execution}
     \input{chapters/research_topic/path_execution.tex}

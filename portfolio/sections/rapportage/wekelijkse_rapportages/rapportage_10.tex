@@ -1,0 +1,25 @@
+\begin{tabularx}{\textwidth}{| l | X |}
+  \hline
+  Datum: & 11/05/2020 - 15/05/2020\\
+  \hline
+  Geplande taken: &
+  \begin{compactitem}
+    \item \hl{Onderzoek verschillende algoritmen}
+    \item \hl{Implementeren eigen path planning}
+  \end{compactitem}\\
+  \hline
+  Stand van zaken: & \hl{De UAV kan een pad uitvoeren, maar nog geen maken. Doordat er geen packages voor 3D path planning gevonden zijn, zullen we zelf een algoritme moeten schrijven.}\\
+  \hline
+  Problemen en knelpunten: & \hl{Neighbors zoeken in een octree. Drie dementies gebruiken in planner.}\\
+  \hline
+  Oplossingen: & \hl{Omdat de neighbors vinden in een octree praktisch niet haalbaar was op zo een korte tijd, is er besloten om deze om te vormen naar een 3D matrix. In deze 3D matrix lukt de implementatie van A* niet, er wordt geen pad gevonden.}\\
+  \hline
+  Persoonlijke reflectie: & \hl{De code is niet performant geschreven, er worden veel omwegen gemaakt om het ons makkelijker te maken. Dit gebeurt omdat we weinig tijd hebben voor deze implementatie.}\\
+  \hline
+  Planning volgende week: &
+  \begin{compactitem}
+    \item \hl{Verder gaan in 2D snede van 3D matrix}
+    \item \hl{Bug fixen A* implementatie}
+  \end{compactitem}\\
+  \hline
+\end{tabularx}
