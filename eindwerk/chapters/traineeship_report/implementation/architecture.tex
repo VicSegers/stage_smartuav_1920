@@ -9,7 +9,7 @@ The architecture consists of three containers being a controller, keyboard teleo
 
 \clearpage
 
-The containers in the architecture are run from different images. The simulation image has an \acs{opengl} base image or a specific NVIDIA base image if the host computer has NVIDIA installed. Adding to this base image, the simulation has \acs{ros} Melodic, MAVROS, Gazebo 9, the PX4 Firmware and their dependencies installed. There are two other images used in this project, a \acs{ros} base image and a MAVROS image. The keyboard teleoperation container uses the \acs{ros} base image with only \acs{ros} Melodic installed. The controller needs MAVROS to send commands to the \acsp{uav} and therefore uses the MAVROS image that extends from the \acs{ros} base image with the installation of MAVROS.
+The containers in the architecture are run from different images. The simulation image has an \acs{opengl} base image or a specific NVIDIA base image if the host computer has NVIDIA installed. Adding to this base image, the simulation has \acs{ros} Melodic, MAVROS, Gazebo 9, the PX4 Firmware, and their dependencies installed. There are two other images used in this project, a \acs{ros} Melodic image and a MAVROS image. The keyboard teleoperation container uses the \acs{ros} Melodic image, because it only has to send the keyboard inputs over the \acs{ros} network. The controller needs MAVROS to send commands to the \acsp{uav} and therefore uses the MAVROS image that extends from the \acs{ros} base image with the installation of MAVROS.
 
 \begin{figure}[!h]
   \centering

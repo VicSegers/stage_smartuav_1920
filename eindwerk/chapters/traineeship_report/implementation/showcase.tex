@@ -1,4 +1,4 @@
-The showcase uses the architecture as a base and adds features referencing the research topic. The simulation image of the architecture is used as a base for the one in the showcase. Three more images are added for containers that run a \acs{slam} algorithm, a path planning algorithm, and a \acs{qrcode} detector. These algorithms and the detector are clarified in the chapter of the research topic.
+The showcase uses the architecture as a base and adds features referencing the research topic. The simulation image of the showcase is built upon the simulation image of the architecture, it adds an OctoMap plugin for RViz and a \acs{qrcode} detector for each simulated \acs{uav}. The \acs{slam} image is also built from the simulation of the architecture because it needs a \acs{gui} to show the created point cloud and other information. The \acs{slam} image has \acs{rtabmap} and all of its dependencies installed. Both the planner and the vision images are built from the \acs{ros} Melodic image. The planner image has Octomap for Python installed and the vision image installs a transformation to calculate the yaw from a quaternion.
 
 \begin{figure}[!h]
   \centering
