@@ -5,10 +5,10 @@
   \input{titlepage}
   \blankpage
   \input{titlepage}
-
   \pagestyle{plain}
   \pagenumbering{roman}
   \nonumchapter{Acknowledgements}
+  \input{chapters/acknowledgements.tex}
   \nonumchapter{Abstract}
   \input{chapters/abstract.tex}
   \clearpage
@@ -36,10 +36,8 @@
     \clearpage
     \section{Technologies}
     \input{chapters/traineeship_report/technologies.tex}
-    \clearpage
       \subsection{ROS}
       \input{chapters/traineeship_report/technologies/ros.tex}
-      \clearpage
       \subsection{Gazebo}
       \input{chapters/traineeship_report/technologies/gazebo.tex}
       \subsection{MAVROS}
@@ -53,11 +51,9 @@
       \input{chapters/traineeship_report/technologies/docker.tex}
       \subsection{RViz}
       \input{chapters/traineeship_report/technologies/rviz.tex}
+      \clearpage
     \section{Implementation}
     \input{chapters/traineeship_report/implementation.tex}
-      \subsection{Overview}
-      \input{chapters/traineeship_report/implementation/overview.tex}
-      \clearpage
       \subsection{Architecture}
       \input{chapters/traineeship_report/implementation/architecture.tex}
       \clearpage
@@ -73,60 +69,61 @@
       \input{chapters/research_topic/environment/dynamic.tex}
       \subsection{What is an indoor environment?}
       \input{chapters/research_topic/environment/indoor.tex}
+      \clearpage
     \section{How is a UAV able to orientate in its environment?}
     \input{chapters/research_topic/orientation.tex}
       \subsection{How can a UAV observe its environment?}
       \input{chapters/research_topic/orientation/observing.tex}
+      \clearpage
         \subsubsection{Which sensors can a UAV use for observing its environment?}
         \input{chapters/research_topic/orientation/observing/sensors.tex}
       \subsection{How is a UAV able to execute mapping and localization?}
       \input{chapters/research_topic/orientation/mapping_and_localization.tex}
-        \subsubsection{Which SLAM algorithms are eligable for a UAV?}
+      \clearpage
+        \subsubsection{Which SLAM algorithms are eligible for a UAV?}
         \input{chapters/research_topic/orientation/slam_algorithms.tex}
           \paragraph{ORB\hyp{}SLAM2}
           \input{chapters/research_topic/orientation/slam_algorithms/orb_slam2.tex}
+          \clearpage
           \paragraph{Cartographer}
           \input{chapters/research_topic/orientation/slam_algorithms/cartographer.tex}
           \paragraph{BLAM!}
           \input{chapters/research_topic/orientation/slam_algorithms/blam.tex}
+          \clearpage
           \paragraph{hdl\_graph\_slam}
           \input{chapters/research_topic/orientation/slam_algorithms/hdl_graph_slam.tex}
+          \clearpage
           \paragraph{RTAB\hyp{}Map}
           \input{chapters/research_topic/orientation/slam_algorithms/rtab_map.tex}
+          \clearpage
           \paragraph{Comparison SLAM algorithms}
           \input{chapters/research_topic/orientation/slam_algorithms/comparison.tex}
+          \clearpage
     \section{How is a path of a UAV to a goal planned?}
     \input{chapters/research_topic/path_planning.tex}
       \subsection{What defines an executable path?}
       \input{chapters/research_topic/path_planning/executable_path.tex}
+      \clearpage
       \subsection{How is the goal of a UAV defined?}
       \input{chapters/research_topic/path_planning/goal.tex}
       \subsection{Which path planning algorithms are usable?}
       \input{chapters/research_topic/path_planning/algorithms.tex}
         \subsubsection{Dijkstra}
         \input{chapters/research_topic/path_planning/algorithms/dijkstra.tex}
+        \clearpage
         \subsubsection{Lazy Theta*}
         \input{chapters/research_topic/path_planning/algorithms/lazy_theta_star.tex}
         \subsubsection{A*}
         \input{chapters/research_topic/path_planning/algorithms/a_star.tex}
-        \subsubsection{Comparison search algorithms}
-        \input{chapters/research_topic/path_planning/algorithms/comparison.tex}
+        \clearpage
     \section{How can a UAV execute a path?}
-
-    \section{Path execution}
     \input{chapters/research_topic/path_execution.tex}
     \clearpage
-    \section{Difficulties}
+    \section{What are the unsolved difficulties?}
     \input{chapters/research_topic/difficulties.tex}
 
   \nonumchapter{Conclusion}
+  \input{chapters/conclusion.tex}
   \nonumchapter{Bibliographical references}
   \printbibliography[heading=none]
-
-  % \renewcommand\thesection{\Alph{section}}  % Alphabetical numbering for subsections
-  % \appendix
-  % \nonumchapter{Appendices}
-  %   \section{Description Appendix A}
-  %   \section{Description Appendix B}
-  %   \section{Description Appendix C}
 \end{document}

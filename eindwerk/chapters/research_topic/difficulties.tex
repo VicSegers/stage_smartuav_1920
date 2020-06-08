@@ -1,3 +1,7 @@
-% exploration
+The developed system is not completely autonomous, the first \acs{uav} has to fly to the \acs{qrcode} manually for the second \acs{uav} to fly to this without any other input than the location of the goal and the mapped environment.
 
-There is currently no \acs{ros} algorithm for exploration in a \acs{3d} environment. The first \acs{uav} should utilize such an algorithm. Because of the time constraint of the project, the first \acs{uav} executes a predetermined path that leads to the \acs{qrcode} which acts as the goal for the following \acs{uav}.
+There is currently no \acs{ros} algorithm for exploration in a \acs{3d} environment. Because of time constraints and lack of expertise, writing such an algorithm based on a \acs{2d} implementation is not realistic. The performance of Python is not adequate to run such an algorithm in real time, a language such as C++ should be used for this.
+
+The path planning or exploration algorithm should be executed directly on the Octree output of \acs{rtabmap}. However, in this project the Octree is converted to a \acs{3d} matrix to find the neighboring coordinates, which is an unnecessary conversion.
+
+Because of developing in an simulated environment, the \acs{slam} algorithm detected loopclosures where they should not be detected. The simulated environment is created with textures that repeat and are exactly the same each time, in a real environment two exactly the same textures do not exist. To overcome this issue, an un realistic floor design was created that was streched over the whole surface. A better solution would be to create a better simulated environment with custom textures or add random noise to each texture.
