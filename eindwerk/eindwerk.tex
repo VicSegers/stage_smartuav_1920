@@ -11,21 +11,21 @@
   \nonumchapter{Acknowledgements}
   \nonumchapter{Abstract}
   \input{chapters/abstract.tex}
-  \newpage
+  \clearpage
   \phantomsection
   \addcontentsline{toc}{chapter}{Table of Contents}
   \tableofcontents
-  \newpage
+  \clearpage
   \phantomsection
   \addcontentsline{toc}{chapter}{List of Figures}
   \listoffigures
-  \newpage
+  \clearpage
   \phantomsection
   \addcontentsline{toc}{chapter}{List of Tables}
   \listoftables
   \nonumchapter{List of Abbreviations}
   \input{abbreviations.tex}
-  \newpage
+  \clearpage
   \pagenumbering{arabic}
   \nonumchapter{Introduction}
   \input{chapters/introduction.tex}
@@ -33,10 +33,10 @@
   \chapter{Traineeship report}
     \section{About the company}
     \input{chapters/traineeship_report/about_the_company.tex}
-    \newpage
+    \clearpage
     \section{Technologies}
     \input{chapters/traineeship_report/technologies.tex}
-    \newpage
+    \clearpage
       \subsection{ROS}
       \input{chapters/traineeship_report/technologies/ros.tex}
       \clearpage
@@ -57,68 +57,65 @@
     \input{chapters/traineeship_report/implementation.tex}
       \subsection{Overview}
       \input{chapters/traineeship_report/implementation/overview.tex}
-      \newpage
+      \clearpage
       \subsection{Architecture}
       \input{chapters/traineeship_report/implementation/architecture.tex}
+      \clearpage
       \subsection{Showcase}
       \input{chapters/traineeship_report/implementation/showcase.tex}
 
   \chapter{Research topic}
-    \input{chapters/research_topic.tex}
-    \section{Dynamic environment}
-    \input{chapters/research_topic/dynamic_environment.tex}
-      \subsection{Definition}
-      \input{chapters/research_topic/dynamic_environment/definition.tex}
-      \subsection{Properties}
-      \input{chapters/research_topic/dynamic_environment/properties.tex}
-      \newpage
-        \subsubsection{Indoor}
-        \input{chapters/research_topic/dynamic_environment/properties/indoor.tex}
-        \subsubsection{Dynamic}
-        \input{chapters/research_topic/dynamic_environment/properties/dynamic.tex}
-        \newpage
-    \section{Orientation}
+  \input{chapters/research_topic.tex}
+  \clearpage
+    \section{What defines a dynamic indoor environment?}
+    \input{chapters/research_topic/dynamic_indoor_environment.tex}
+      \subsection{What is the definition of a dynamic environment?}
+      \input{chapters/research_topic/environment/dynamic.tex}
+      \subsection{What is an indoor environment?}
+      \input{chapters/research_topic/environment/indoor.tex}
+    \section{How is a UAV able to orientate in its environment?}
     \input{chapters/research_topic/orientation.tex}
-      \subsection{Observing}
+      \subsection{How can a UAV observe its environment?}
       \input{chapters/research_topic/orientation/observing.tex}
-        \subsubsection{Sensors}
+        \subsubsection{Which sensors can a UAV use for observing its environment?}
         \input{chapters/research_topic/orientation/observing/sensors.tex}
-        \subsubsection{Dynamic properties}
-        \input{chapters/research_topic/orientation/observing/dynamic_properties.tex}
-        \newpage
-      \subsection{Mapping and localization}
+      \subsection{How is a UAV able to execute mapping and localization?}
       \input{chapters/research_topic/orientation/mapping_and_localization.tex}
-      \subsection{SLAM algorithms}
-      \input{chapters/research_topic/orientation/slam_algorithms.tex}
-        \subsubsection{ORB-SLAM2}
-        \input{chapters/research_topic/orientation/slam_algorithms/orb_slam2.tex}
-        \subsubsection{Cartographer}
-        \input{chapters/research_topic/orientation/slam_algorithms/cartographer.tex}
-        \newpage
-        \subsubsection{BLAM!}
-        \input{chapters/research_topic/orientation/slam_algorithms/blam.tex}
-        \subsubsection{hdl\_graph\_slam}
-        \input{chapters/research_topic/orientation/slam_algorithms/hdl_graph_slam.tex}
-        \subsubsection{RTAB-Map}
-        \input{chapters/research_topic/orientation/slam_algorithms/rtab_map.tex}
-        \subsubsection{Comparison SLAM algorithms}
-        \input{chapters/research_topic/orientation/slam_algorithms/comparison_algorithms.tex}
-        \newpage
-    \section{Path planning}
+        \subsubsection{Which SLAM algorithms are eligable for a UAV?}
+        \input{chapters/research_topic/orientation/slam_algorithms.tex}
+          \paragraph{ORB\hyp{}SLAM2}
+          \input{chapters/research_topic/orientation/slam_algorithms/orb_slam2.tex}
+          \paragraph{Cartographer}
+          \input{chapters/research_topic/orientation/slam_algorithms/cartographer.tex}
+          \paragraph{BLAM!}
+          \input{chapters/research_topic/orientation/slam_algorithms/blam.tex}
+          \paragraph{hdl\_graph\_slam}
+          \input{chapters/research_topic/orientation/slam_algorithms/hdl_graph_slam.tex}
+          \paragraph{RTAB\hyp{}Map}
+          \input{chapters/research_topic/orientation/slam_algorithms/rtab_map.tex}
+          \paragraph{Comparison SLAM algorithms}
+          \input{chapters/research_topic/orientation/slam_algorithms/comparison.tex}
+    \section{How is a path of a UAV to a goal planned?}
     \input{chapters/research_topic/path_planning.tex}
-      \subsection{Executable path}
+      \subsection{What defines an executable path?}
       \input{chapters/research_topic/path_planning/executable_path.tex}
-      \subsection{Goal}
+      \subsection{How is the goal of a UAV defined?}
       \input{chapters/research_topic/path_planning/goal.tex}
-      \subsection{Search algorithms}
+      \subsection{Which path planning algorithms are usable?}
+      \input{chapters/research_topic/path_planning/algorithms.tex}
         \subsubsection{Dijkstra}
-        \subsubsection{Theta*}
+        \input{chapters/research_topic/path_planning/algorithms/dijkstra.tex}
+        \subsubsection{Lazy Theta*}
+        \input{chapters/research_topic/path_planning/algorithms/lazy_theta_star.tex}
         \subsubsection{A*}
+        \input{chapters/research_topic/path_planning/algorithms/a_star.tex}
         \subsubsection{Comparison search algorithms}
-      \newpage
+        \input{chapters/research_topic/path_planning/algorithms/comparison.tex}
+    \section{How can a UAV execute a path?}
+
     \section{Path execution}
     \input{chapters/research_topic/path_execution.tex}
-    \newpage
+    \clearpage
     \section{Difficulties}
     \input{chapters/research_topic/difficulties.tex}
 

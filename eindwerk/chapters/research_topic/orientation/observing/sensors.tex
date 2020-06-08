@@ -1,4 +1,34 @@
-A sensor is a piece of hardware mounted on the \acs{uav} that gathers data about the environment or itself is some way. There is are numerous sensors that can be attached to a \acs{uav}. For example a camera, a \acs{lidar}, a gyroscope, an accelerometer, and many more. The used sensors are picked by conducting research, using common sense, and by the requirements of an implemented \acs{slam} algorithm.
+A sensor is a piece of hardware mounted on the \acs{uav} that gathers data about the environment or itself is some way. A \acs{uav} has many sensors already attached to it, but there is a numerous amount of sensors that can be added. For example, different types of cameras or \acsp{lidar}. The sensors used in this project are picked by conducting research, using common sense, and by the requirements of the implemented \acs{slam} algorithm.
 
 % http://breckon.eu/toby/publications/papers/magnabosco13slam.pdf
-The most commonly used sensors for \acs{slam} algorithms are optical sensors. Optical sensors may be \acs{1d}, \acs{2d}, or \acs{3d} \acsp{lidar}, \acs{2d} or \acs{3d} sonar sensors, or a normal or a depth camera. All sensors have their pros and cons, for example consistency, price, or weight.
+The most commonly used sensors for \acs{slam} algorithms are optical sensors. Optical sensors may be \acs{1d}, \acs{2d}, or \acs{3d} \acsp{lidar}, \acs{2d} or \acs{3d} sonar sensors, or a monocular, stereo or \acs{rgbd} camera. All sensors have their pros and cons, depicted in table~\ref{tab:sensors} \cite{slam_sensor_handover}
+
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{| c | c | c |}
+    \hline
+    \textbf{Sensor} & \textbf{Pros} & \textbf{Cons}\\
+    \hline
+    \acs{1d} \acs{lidar} & Low cost & Limited range of detection\\
+    \hline
+    \multirow{3}{*}{\acs{2d} \acs{lidar}} & Medium cost & \multirow{3}{*}{No vertical detection}\\
+    & 360$^{\circ}$ detection &\\
+    & Commonly used in \acs{slam} &\\
+    \hline
+    \acs{3d} \acs{lidar} & 360$^{\circ}$ detection on various angles & High cost\\
+    \hline
+    \multirow{3}{*}{Monocular camera} & \multirow{3}{*}{Cheap} & Minimal information\\
+    & & Compute very heavy for depth\\
+    & & Poor in low light\\
+    \hline
+    \multirow{3}{*}{Stereo camera} & Good in\hyp{}and outdoors & Compute heavy for depth\\
+    & Low cost & Requires textures \\
+    & Rich of information & Poor in low light \\
+    \hline
+    \multirow{2}{*}{\acs{rgbd} camera} & No ambient light needed & Poor oudoor performance\\
+    & Compute unintensive for depth & Affected by reflection\\
+    \hline
+  \end{tabular}
+  \caption{Pros and cons of sensors \cite{3d_camera}}
+  \label{tab:sensors}
+\end{table}

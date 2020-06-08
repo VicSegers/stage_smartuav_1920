@@ -3,7 +3,6 @@
 \usepackage[T1]{fontenc}
 \usepackage{a4wide}
 \usepackage{graphicx}
-\graphicspath{{images/}}
 \usepackage{xcolor}
 \definecolor{pxlgreen}{RGB}{73,153,20}
 \usepackage{sectsty}
@@ -18,6 +17,8 @@
   urlcolor=black
 }
 \usepackage{outlines}
+\usepackage{paralist}
+\usepackage{multirow}
 
 \usepackage{chngcntr}
 \counterwithout{figure}{chapter}
@@ -74,9 +75,11 @@
 
 \usepackage{titlesec}
 \renewcommand{\thechapter}{\Roman{chapter}}
-\titleformat{\chapter}
-  {\color{pxlgreen}\normalfont\LARGE\bfseries}{\thechapter}{1em}{}
+\titleformat{\chapter}{\color{pxlgreen}\normalfont\LARGE\bfseries}{\thechapter}{1em}{}
 \titlespacing*{\chapter}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+\titleformat{\paragraph}[hang]{\color{pxlgreen}\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{0.5em}
 
 \renewcommand*\thesection{\arabic{section}}
 

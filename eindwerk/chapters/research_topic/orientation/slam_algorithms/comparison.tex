@@ -1,0 +1,23 @@
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{| c | c | c | c |}
+    \hline
+    \textbf{Algorithm} & \textbf{Sensors} & \textbf{Point cloud} & \textbf{Dimentional}\\
+    \hline
+    \multirow{3}{*}{ORB\hyp{}SLAM2} & Monocular camera & \multirow{3}{*}{sparse} & \multirow{3}{*}{\acs{3d}}\\
+    & Stereo camera & &\\
+    & \acs{rgbd} camera & &\\
+    \hline
+    Cartographer & Multiple configurations & dense & \acs{2d} \& \acs{3d}\\
+    \hline
+    \acs{blam} & \acs{3d} \acs{lidar} & dense & \acs{3d}\\
+    \hline
+    hdl\_graph\_slam & \acs{3d} \acs{lidar} & dense & \acs{3d}\\
+    \hline
+    \multirow{3}{*}{RTAB-Map} & Stereo camera & \multirow{3}{*}{dense} & \multirow{3}{*}{\acs{3d}}\\
+    & \acs{rgbd} camera & &\\
+    & \acs{3d} \acs{lidar} & &\\
+    \hline
+  \end{tabular}
+  \caption{Comparison \acs{slam} algorithms}
+\end{table}

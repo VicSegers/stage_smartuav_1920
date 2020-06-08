@@ -1,3 +1,16 @@
-The showcase uses the architecture as a base and adds features referencing the research topic. The simulation image of the architecture is used as a base for the one in the showcase. It adds support for a VLP-16 Velodyne \acs{lidar}, allows OctoMap in RViz, and provides a \acs{qrcode} detector. A new image is added for a container than runs a \acs{slam} algorithm. Multiple versions of this image are made for different algorithms, such as \textit{hdl\_graph\_slam} and \acs{rtabmap}. These algorithms are explained in the chapter of the research topic.
+The showcase uses the architecture as a base and adds features referencing the research topic. The simulation image of the architecture is used as a base for the one in the showcase. Three new image are added for a containers that run a \acs{slam} algorithm, a path planning algorithm, and a \acs{qrcode} detector. These algorithms and the detector are clarified in the chapter of the research topic.
 
-The showcase is used to conduct research, visualize this research, and show the capabilities of the architecture. The main addition to the architecture is the implementation of the \acs{slam} algorithms and their dependencies.
+\begin{figure}[!h]
+  \centering
+  % \includegraphics[width=\linewidth]{images/showcase_images.png}
+  \caption{Images showcase}
+\end{figure}
+
+The showcase is used to conduct research, visualize this research, and show the capabilities of the architecture. Figure~\ref{fig:showcase_containers} visualizes which containers are run in the showcase and how there are connected.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=\linewidth]{images/showcase_containers.png}
+  \caption{Containers showcase}
+  \label{fig:showcase_containers}
+\end{figure}

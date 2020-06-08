@@ -1,20 +1,20 @@
 In this project, mapping and localization are closely linked together. In order to create a map, the current location of the \acs{uav} in its area has to be known to be used as a reference point. However, to get the current location of the \acs{uav} in its area, the map of its area has to be known. Therefore, it can be described as a "chicken\hyp{}or\hyp{}egg" problem.
 
 % https://medium.com/desn325-emergentdesign/s-l-a-m-tech-tracking-743d059b1468
-This issue can be overcome through the usage of a pre-existing map of an environment, for example, \acs{gps} data. However, there is no data for an indoor environment and if there was, it would not be precise enough or updated in real\hyp{}time. Therefore, the introduction of a \acs{slam} algorithm which is capable of mapping and localizing simultaneously by using feature extraction.
+This issue can be overcome through the usage of a pre-existing map of an environment, for example, \acs{gps} data. However, there is no data for an indoor environment and if there was, it would not be precise enough or updated in real\hyp{}time. Therefore, the introduction of a \acs{slam} algorithm which is capable of mapping and localizing simultaneously by using feature extraction. \cite{slam_tech_and_tracking}
 
 % https://www.andreasjakl.com/basics-of-ar-slam-simultaneous-localization-and-mapping/
-A \acs{slam} system consists of four parts: sensor data, a front\hyp{}end, a back\hyp{}end, and the \acs{slam} estimate. The sensor data is all the input data a \acs{slam} system receives. In the front\hyp{}end a feature extraction process is executed. These features are tracked through a stream of video in the back\hyp{}end. The back\hyp{}end also handles long\hyp{}term associations to reduce drift and triggers loop\hyp{}closures. As a result, the \acs{slam} systems outputs all tracked features with their locations and relations, as well as the position of the sensors within the world.
+A \acs{slam} system consists of four parts: sensor data, a front\hyp{}end, a back\hyp{}end, and the \acs{slam} estimate. The sensor data is all the input data a \acs{slam} system receives. In the front\hyp{}end a feature extraction process is executed. These features are tracked through a stream of video in the back\hyp{}end. The back\hyp{}end also handles long\hyp{}term associations to reduce drift and triggers loop\hyp{}closures. As a result, the \acs{slam} systems outputs all tracked features with their locations and relations, as well as the position of the sensors within the world. \cite{andreas_jakl_slam}
 
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.75\linewidth]{images/slam_system.jpg}
-  \caption{SLAM system}
+  \caption{SLAM system \cite{fe_be_slam_system}}
   \label{fig:slam_system}
 \end{figure}
 
 % https://www.andreasjakl.com/basics-of-ar-anchors-keypoints-feature-detection/
-As earlier mentioned, a \acs{slam} algorithm uses feature extraction as a way to track the movement of the \acs{uav} in space. The easiest way to explain how feature extraction works is its implementation on a camera. On every frame, features are detected. The way these features are detected differ from algorithm to algorithm. Every feature detected, needs a unique description based on its properties. 
+As earlier mentioned, a \acs{slam} algorithm uses feature extraction as a way to track the movement of the \acs{uav} in space. The easiest way to explain how feature extraction works is its implementation on a camera. On every frame, features are detected. The way these features are detected differ from algorithm to algorithm. Every feature detected, needs a unique description based on its properties. \cite{andreas_jakl_basics_of_ar}
 
 The tracking of the features throughout the frames is handled in the back\hyp{}end. The descriptions of these features of different frames are compared. The motion of the \acs{uav} is based on the change of the position of these features relative to the previous frame. To keep account of moving objects and outliers, the majority of features must move in the same direction.
 
