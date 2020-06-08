@@ -1,1 +1,3 @@
-# stage_smartuav_1920
+# UAVs autonomously navigating dynamic indoor environments
+
+All documents in this repository are related to my internship at Smart ICT.
