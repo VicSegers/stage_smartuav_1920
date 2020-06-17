@@ -4,24 +4,24 @@
   \hline
   Geplande taken: &
   \begin{compactitem}
-    \item \hl{Verder gaan in 2D snede van 3D matrix}
-    \item \hl{Bug fixen A* implementatie}
-    \item \hl{Rekening houden grootte UAV}
+    \item Verder gaan in 2D snede van 3D matrix
+    \item Bug fixen A* implementatie
+    \item Rekening houden grootte UAV
   \end{compactitem}\\
   \hline
-  Stand van zaken: & \hl{Doordat de 3D implementatie niet lukt, gaat er een 2D snede genomen worden en daarin path plannen. Maar tijdens deze implementatie werd de bug gevonden in het omzetten van de octree naar een 3D matrix.}\\
+  Stand van zaken: & Doordat de 3D implementatie niet lukt, gaat er een 2D snede genomen worden en daarin path plannen. Maar tijdens deze implementatie werd de bug gevonden in het omzetten van de octree naar een 3D matrix.\\
   \hline
-  Problemen en knelpunten: & \hl{Geen rekening gehouden met de diepte van de leaves in de octree. A* vond geen neighbors doordat niet alle cellen omgezet werden in de diepste depth.}\\
+  Problemen en knelpunten: & Geen rekening gehouden met de diepte van de leaves in de octree. A* vond geen neighbors doordat niet alle cellen omgezet werden in de diepste depth.\\
   \hline
-  Oplossingen: & \hl{Recursief de leaves verkleinen tot de maximum diepte. Dit geeft een volledig gevulde 3D matrix.}\\
+  Oplossingen: & Recursief de leaves verkleinen tot de maximum diepte. Dit geeft een volledig gevulde 3D matrix.\\
   \hline
-  Persoonlijke reflectie: & \hl{Door het over het hoofd zien van een kleine bug, werd de hele path planning gedwarsboomd.}\\
+  Persoonlijke reflectie: & Door het over het hoofd zien van een kleine bug, werd de hele path planning gedwarsboomd.\\
   \hline
   Planning volgende week: &
   \begin{compactitem}
-    \item \hl{Opschonen code}
-    \item \hl{Documentatie schrijven}
-    \item \hl{Final demo opnemen}
+    \item Opschonen code
+    \item Documentatie schrijven
+    \item Final demo opnemen
   \end{compactitem}\\
   \hline
 \end{tabularx}

@@ -6,3 +6,12 @@
   % • Persoonlijke reflectie
   % • Eindbesluit (het eindresultaat)
 % Dit is uiteindelijk ook je besluitvorming voor je eindwerk.
+Tijdens mijn stage bij Smart ICT heb ik zeer veel ervaring opgedaan rond Docker, ROS, SLAM-algoritmes (voornamelijk RTAB-Map), zoekalgoritmes (voornamelijk A*) en het aansturen van een UAV met behulp van MAVROS. Dit zijn de elementen die aan bot kwamen tijdens mijn stage opdracht, maar ik heb ook zaken geleerd die voorkwamen bij de opdrachten van mijn collega staigairs bij Smart ICT zoals multi-threading in Python.
+
+Het project voor het COVID-19 gebeuren verliep relatief consistent, maar hier en daar waren wel wat struikelblokken waar we wat langer op vast bleven hangen. Tijdens de periode dat we van thuis uit moesten werken, is mijn productiviteit heel heel stuk gedaald. Maar het terug mogen samen komen in de AIHub heeft een heel deel goed gemaakt.
+
+Er zijn een aantal problemen tevoorschijn gekomen tijdens het project. Zoals de afwezigheid van een 3D explore algoritme, het vinden van buren nodes in een Octree representatie, de afwijking in het gevlogen pad van de UAV's, de minimale vrije punten in een outdoor omgeving en incorrecte loopclosures.
+
+Om de incorrecte loopclosures tegen te gaan hebben we veel unieke textures toegevoegd in de indoor omgeving, vooral op de vloer, zodat er geen twee dezelfde plaatsen zijn met dezelfde textures. Wegens gebrek aan tijd en kennis van C++, hebben we de Octree omgevormd naar een 3D-matrix om de buren nodes erin te zoeken. Het exploratie algorimte hebben we achterwegen geladen en een UAV een vast pad laten vliegen die de omgeving gaat mappen en het door stuurt naar de tweede UAV om hierin padplanning uit te voeren. De afwijking in het gevlogen pad en de minimale vrije punten hebben we helaas niet kunnen oplossen, zelfs door verschillende methodes toe te passen.
+
+Ik ben zelf heel tevreden van het geleverde resultaat en de kennis die ik heb gehaald uit het maken en onderzoeken van dit project. Vooral op de architectuur ben ik trots, dat deze zeer minimaal is en toch alles bevat wat het nodig heeft. Ik hoop dat ik deze ook nuttig kan zijn voor toekomstige projecten van andere developers. Het enige echt spijtige aan de stage vond ik het van thuis uit moeten werken door COVID-19, wat natuurlijk niemand in handen had.
